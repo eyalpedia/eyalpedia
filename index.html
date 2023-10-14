@@ -6,10 +6,6 @@ body {
   background-color: black;
   color: white;
 }
-p {
-  font-size: 15px;
-  margin: 0px 50px 0px 0px;
-}
 h1 {
   font-size: 45px;
 }
@@ -19,20 +15,46 @@ a:link {
 a:visited {
   color: purple;
 }
+@media screen and (max-width: 540px) {
+	p {
+	  font-size: 15px;
+	  margin: 0px 50px 0px 0px;
+	}
+	.infobox-caption {
+	  border: 1px solid lightgray;
+	  font-size: 25px;
+	  background-color: green;
+	  color: #F0A0A0
+	}
+	.infobox {
+	  float: left;
+	  font-size: 25px;
+	  margin: 0px 15px 15px 7px;
+	  border: 1px solid lightgray;
+	  color: #00FFF0
+	}
+}
+@media not screen and (max-width: 540px) {
+	p {
+	  font-size: 25px;
+	  margin: 0px 100px 0px 0px;
+	}
+	.infobox-caption {
+	  border: 1px solid lightgray;
+	  font-size: 20px;
+	  background-color: green;
+	  color: #F0A0A0
+	}
+	.infobox {
+	  float: left;
+	  font-size: 15px;
+	  margin: 0px 15px 15px 7px;
+	  border: 1px solid lightgray;
+	  color: #00FFF0
+	}
+}
 
-.infobox-caption {
-  border: 1px solid lightgray;
-  font-size: 25px;
-  background-color: green;
-  color: #F0A0A0
-}
-.infobox {
-  float: left;
-  font-size: 25px;
-  margin: 0px 15px 15px 7px;
-  border: 1px solid lightgray;
-  color: #00FFF0
-}
+
 </style>
 </head>
 <body>
