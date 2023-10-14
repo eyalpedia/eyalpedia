@@ -6,6 +6,7 @@ body {
   background-color: black;
   color: white;
 }
+
 p {
   font-size: 15px;
   margin: 0px 50px 0px 0px;
@@ -33,9 +34,23 @@ a:visited {
   border: 1px solid lightgray;
   color: #00FFF0
 }
+.light-mode {
+  background-color: white;
+  color: black;
+}
 </style>
+<script>
+function toggleDark() {
+  var element = document.body;
+  element.classList.toggle("light-mode");
+  var infobox = document.getElementsByClassName('infobox')[0];
+  infobox.classList.toggle("light-mode");
+}
+</script>
 </head>
 <body>
+
+<button onclick=toggleDark()>Toggle Dark Mode</button>
 
 <h1 dir ="rtl" lang = "heb" align = "center">איל יאיר הכהן</h1>
 <table class="infobox" dir="rtl">
