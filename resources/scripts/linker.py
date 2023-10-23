@@ -9,9 +9,10 @@ for line in lines:
     link = '<a href="'+link+'">'+word+'</a>'
     print(word,link)
     
-    html = html.replace('>'+word+'<','>BLA<')
-    html = html.replace(word, link)
-    html = html.replace('>BLA<','>'+word+'<')
+    html = html.replace('>'+word+'</a>','>BLA</a>')
+    for c in ' ,.\r\n':
+        html = html.replace(word+c, link+c)
+    html = html.replace('>BLA</a>','>'+word+'</a>')
 
 with open('../../index.html','w',encoding='UTF8') as fp:
 	fp.write(html)
