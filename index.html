@@ -3,12 +3,12 @@
 <head>
 <style>
 body {
+  background-color: #D9D9D9;
+  color: black;
+}
+.dark-mode {
   background-color: black;
   color: white;
-}
-.light-mode {
-  background-color: white;
-  color: black;
 }
 
 p {
@@ -27,24 +27,27 @@ a:link {
 a:visited {
   color: purple;
 }
-
+.light-mode-infobox-caption {
+  border: 1px solid black;
+  font-size: 25px;
+  background-color: #AAAAAA;
+  color: black
+}
 .infobox-caption {
   border: 1px solid lightgray;
   font-size: 25px;
   background-color: green;
   color: #F0A0A0
 }
-.light-mode-infobox-caption {
-  color: black;
-}
-.infobox {
+.light-mode-infobox {
   float: left;
   font-size: 25px;
   margin: 0px 15px 15px 7px;
-  border: 1px solid lightgray;
-  color: #00FFF0;
+  border: 1px solid black;
+  background-color: lightgray;
+  color: black;
 }
-.light-mode-infobox {
+.infobox {
   float: left;
   font-size: 25px;
   margin: 0px 15px 15px 7px;
@@ -55,23 +58,23 @@ a:visited {
 <script>
 function toggleDark() {
   var element = document.body;
-  element.classList.toggle("light-mode");
-  var infobox = document.getElementsByClassName('infobox')[0];
-  infobox.classList.toggle("light-mode-infobox");
-  var infoboxcap = document.getElementsByClassName('infobox-caption')[0];
-  infoboxcap.classList.toggle("light-mode-infobox");
+  element.classList.toggle("dark-mode");
+  var infobox = document.getElementsByClassName('light-mode-infobox')[0];
+  infobox.classList.toggle("infobox");
+  var infoboxcap = document.getElementsByClassName('light-mode-infobox-caption')[0];
+  infoboxcap.classList.toggle("infobox-caption");
 }
 </script>
 </head>
-<body class="light-mode">
+<body>
 
 <button onclick=toggleDark() style="font-size:20px">Toggle Dark Mode</button>
 
 <h1 dir ="rtl" lang = "heb" align = "center">איל יאיר הכהן</h1>
-<table class="infobox,light-mode-infobox" dir="rtl">
-<caption class ="infobox-caption">איל יאיר הכהן<br>Eyal Yair Hacohen</caption>
+<table class="light-mode-infobox" dir="rtl">
+<caption class ="light-mode-infobox-caption">איל יאיר הכהן<br>Eyal Yair Hacohen</caption>
 <tbody>
-<tr><td colspan="2"><img src="resources/1.jpg" height="318.2" width ="313.22"></td></tr>
+<tr><td colspan="2" align="center"><img src="resources/1.jpg" height="318.2" width ="313.22"></td></tr>
 <tr><td colspan="2" style="text-align:center">איל ב2019 (נראהלי)</td></tr>
 <tr>
 <th scope = "row">לידה</th>
